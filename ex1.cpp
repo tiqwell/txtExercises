@@ -9,18 +9,17 @@ int main() {
     file >> str;
     file.close();
     int current = 0, max = 0;
-    for (int i = 0; i < str.size(); i++) {
+    for (int i = 0; i < str.size(); i++) 
+    {
         if (str[i] == 'C')
             current++;
-        else {
+        else 
+        {
             max = std::max(max, current);
             current = 0;
         }
     }
-
-    if (current > max)
-        max = current;
-
+    max = std::max(max, current);
     std::cout << max << std::endl;
     return 0;
 }
