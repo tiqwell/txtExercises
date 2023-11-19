@@ -19,10 +19,7 @@ int main() {
             current = 0;
         }
     }
-
-    if (current > max)
-        max = current;
-
+    max = std::max(max, current);
     std::cout << max << std::endl;
     return 0;
 }
